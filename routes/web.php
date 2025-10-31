@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [UserController::class, 'home'])->middleware('auth,verified')->name('dashboard');
+Route::get('/dashboard', [UserController::class, 'home'])->name('dashboard');
 
 Route::get('admin/dashboard' , [UserController::class, 'index'])->middleware('auth,admin')->name('admin.dashboard');
 
